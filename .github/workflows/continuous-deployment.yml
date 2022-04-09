@@ -4,5 +4,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
+      - uses: actions/checkout@v2
       - name: test
         run: cat Dockerfile
