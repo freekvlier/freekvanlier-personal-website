@@ -1,0 +1,9 @@
+name: Continious Deployment
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: self-hosted
+    steps:
+      - run: echo "test"
+      - run: whoami
+      - run: docker ps
