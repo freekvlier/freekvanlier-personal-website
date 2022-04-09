@@ -4,6 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
-      - name: test
-        run: cat Dockerfile
+      - name: Build docker file
+        run: docker build . -t freekvanlier-website-build
+        uses: actions/checkout@v3
+      - run: docker run -d -p 8080:80 --name freekvanlier-website freekvanlier-website-build
