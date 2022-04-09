@@ -4,6 +4,5 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
-      - run: echo "test"
-      - run: whoami
-      - run: docker ps
+      - run: docker build . -t freekvanlier-website-build
+      - run: docker run -d -p 8080:80 --name freekvanlier-website freekvanlier-website-build
