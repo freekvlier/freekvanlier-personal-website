@@ -1,18 +1,21 @@
 name: Continious Deployment
-on: [push]
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
-  Explore-GitHub-Actions:
+  Deploy-New-Docker-Container:
     runs-on: self-hosted
     steps:
-      - run: echo "test"
-      - run: whoami
-      - run: ipconfig
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
+      - name: Stop old Docker container
+        run: docker stop freekvanlier-website
+      - name: Remove old Docker container
+        run: docker rm freekvanlier-website
+      - name: Checkout Repo
         uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Build Docker file
+        run: docker build . -t freekvanlier-website-build
+      - name: Run Docker Build
+        run: docker run -d -p 80:80 --name freekvanlier-website freekvanlier-website-build
