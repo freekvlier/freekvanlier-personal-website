@@ -4,9 +4,13 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
+      - name: Stop old Docker container
+        run: docker stop freekvanlier-website
+      - name: Remove old Docker container
+        run: docker rm freekvanlier-website
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Build Docker file
         run: docker build . -t freekvanlier-website-build
       - name: Run Docker Build
-        run: docker run -d -p 8080:80 --name freekvanlier-website freekvanlier-website-build
+        run: docker run -d -p 80:80 --name freekvanlier-website freekvanlier-website-build
