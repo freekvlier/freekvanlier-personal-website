@@ -5,5 +5,4 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: test
-        working-directory: app
         run: ls -la
