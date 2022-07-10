@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center text-xl pt-40 animated fadeInUp text-gray-500">
+    <div class="text-center text-xl p-40 animated fadeInUp text-gray-500">
         <span>Deze website is in aanbouw!!!</span>
     </div>
 </template>

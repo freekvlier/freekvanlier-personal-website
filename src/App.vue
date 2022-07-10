@@ -1,16 +1,15 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
-import Me from './components/Me.vue'
+import Home from './components/Home.vue'
 import Construction from './components/Construction.vue'
 </script>
 
 <template>
-
-  <main>
+  <main class="flex flex-col h-screen">
     <Navbar />
-    <Me />
-    <Construction />
+    <Home />
   </main>
+  <Construction />
 </template>
 
 <style>
