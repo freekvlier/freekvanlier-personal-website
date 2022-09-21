@@ -11,8 +11,10 @@ jobs:
     steps:
       - name: Stop old Docker container
         run: docker stop freekvanlier-website
+        continue-on-error: true
       - name: Remove old Docker container
         run: docker rm freekvanlier-website
+        continue-on-error: true
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Build Docker file
