@@ -20,4 +20,4 @@ jobs:
       - name: Build Docker file
         run: docker build . -t freekvanlier-website-build
       - name: Run Docker Build
-        run: docker run -d -p 80:80 --name freekvanlier-website freekvanlier-website-build
+        run: docker run -d -p 80:80 --name freekvanlier-website freekvanlier-website-build --restart=always
