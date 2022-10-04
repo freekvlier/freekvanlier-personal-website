@@ -4,7 +4,7 @@
             Ik ben <span class="text-blue-500"> Freek van Lier </span>
         </span>
         <span>
-            Een <span class="font-bold">Full-stack Developer</span> met kennis <br>
+            <span class="font-bold">Full-stack Developer</span> met kennis <br>
             uit alle stadia van softwareontwikkeling
         </span>
     </div>
