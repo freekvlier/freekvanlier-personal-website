@@ -5,7 +5,7 @@
         </span>
         <span>
             <span class="font-bold">Full-stack Developer</span> met kennis <br>
-            uit alle stadia van softwareontwikkeling
+            uit alle stadia van softwareontwikkeling 
         </span>
     </div>
     <div class="arrow">
@@ -19,7 +19,6 @@
 <script>
 export default {
     mounted() {
-
     },
     beforeDestroy() {
         window.removeEventListener("scroll", this.onScroll);
