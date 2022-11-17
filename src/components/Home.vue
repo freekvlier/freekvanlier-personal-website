@@ -4,8 +4,7 @@
             Ik ben <span class="text-blue-500"> Freek van Lier </span>
         </span>
         <span>
-            <span class="font-bold">Full-stack Developer</span> met kennis <br>
-            uit alle stadia van softwareontwikkeling
+            <span class="font-bold">Software Engineering Student </span> bij Fontys Eindhoven <br>
         </span>
     </div>
     <div class="arrow">
