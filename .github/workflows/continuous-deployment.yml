@@ -1,23 +1,23 @@
-name: Continuous Deployment
+# name: Continuous Deployment
 
-# on:
-#   push:
-#     branches:
-#       - main
+# # on:
+# #   push:
+# #     branches:
+# #       - main
       
-jobs:
-  Deploy-New-Docker-Container:
-    runs-on: self-hosted
-    steps:
-      - name: Stop old Docker container
-        run: docker stop freekvanlier-website
-        continue-on-error: true
-      - name: Remove old Docker container
-        run: docker rm freekvanlier-website
-        continue-on-error: true
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-      - name: Build Docker file
-        run: docker build . -t freekvanlier-website-build
-      - name: Run Docker Build
-        run: docker run -d -p 80:80 --name freekvanlier-website freekvanlier-website-build
+# jobs:
+#   Deploy-New-Docker-Container:
+#     runs-on: self-hosted
+#     steps:
+#       - name: Stop old Docker container
+#         run: docker stop freekvanlier-website
+#         continue-on-error: true
+#       - name: Remove old Docker container
+#         run: docker rm freekvanlier-website
+#         continue-on-error: true
+#       - name: Checkout Repo
+#         uses: actions/checkout@v3
+#       - name: Build Docker file
+#         run: docker build . -t freekvanlier-website-build
+#       - name: Run Docker Build
+#         run: docker run -d -p 80:80 --name freekvanlier-website freekvanlier-website-build
