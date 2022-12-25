@@ -18,7 +18,6 @@
 <script>
 export default {
     mounted() {
-
     },
     beforeDestroy() {
         window.removeEventListener("scroll", this.onScroll);
