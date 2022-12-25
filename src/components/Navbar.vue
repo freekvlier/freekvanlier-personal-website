@@ -7,13 +7,33 @@
                 </a>
             </div>
 
-            <div class="flex gap-10 px-10 hover:transition-all">
-                    <button id="aboutbtn" class="underlineOnHover" @click="scrollToElement('about')">Over mij</button>
-                    <button class="underlineOnHover" href="#home">Projecten</button>
+            <div class="invisible flex gap-10 px-10 hover:transition-all lg:visible">
+                <button id="aboutbtn" class="underlineOnHover" @click="scrollToElement('about')">Over mij</button>
+                <button class="underlineOnHover" href="#home">Projecten</button>
             </div>
 
+            <!-- Add the hamburger menu toggle button -->
+            <div class="block lg:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white" @click="toggleMenu">
+                <svg class="white fill-current fill-white h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" transition="all 0.3s ease-in-out"/></svg>
+                </button>
+            </div>
         </div>
-    </div>
+
+        <!-- Add the navbar links for small screens -->
+        <div class="w-full block flex-grow lg:hidden lg:items-center lg:w-auto" :class="[showMenu ? '' : 'hidden']">
+            <div class="text-sm lg:flex-grow text-right">
+                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 mr-4" @click="scrollToElement('about');toggleMenu();">
+                    Over mij
+                </a>
+                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 mr-4" @click="scrollToElement('home');toggleMenu();">
+                    Projecten
+                </a>
+            </div>
+        </div>
+  </div>
+
+   
 </template>
 
 <style scoped>
@@ -87,6 +107,11 @@ export default {
     beforeDestroy() {
         window.removeEventListener("scroll", this.onScroll);
     },
+    data(){
+        return {
+            showMenu: false
+        }
+    },
     methods: {
         onScroll(e) {
             if (window.scrollY > 10) {
@@ -130,6 +155,9 @@ export default {
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
             window.scrollTo({top: y, behavior: 'smooth'});
+        },
+        toggleMenu() {
+            this.showMenu = !this.showMenu
         }
     }
 };
