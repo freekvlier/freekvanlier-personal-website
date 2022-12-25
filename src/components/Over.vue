@@ -3,7 +3,12 @@
         <div class="about p-20 px-80 flex flex-col  gap-6" style="scroll-margin-top: 80px;">
             <span class="fancy text-2xl">Over Mij</span>
             <div class="text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Mijn naam is Freek van Lier en studeer op dit moment ICT  in de richting Software Engineering aan de Fontys in Eindhoven. 
+                Ik ben geïnteresseerd in het ontwikkelen van efficiënte en gebruiksvriendelijke software-oplossingen.
+                Verder ben ik altijd op zoek naar manieren om mijn kennis en vaardigheden te verbeteren en ben enthousiast om nieuwe technologieën te leren.
+
+                In mijn vrije tijd hou ik ervan om te werken aan persoonlijke projecten en samen te werken met anderen aan interessante ideeën.
+                Ik ben ook actief bezig met het verkennen van nieuwe programmeringstools en frameworks om mijn vaardigheden te verbeteren.
             </div>
         </div>
     </section>

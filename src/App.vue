@@ -10,8 +10,8 @@ import Projects from './components/Projects.vue';
 <template>
     <Navbar />
     <Home />
-    <!-- <Over /> -->
-    <!-- <Projects /> -->
+    <Over />
+    <Projects />
     <!-- <Construction /> -->
 </template>
 
