@@ -33,6 +33,7 @@ export default {
     /* background-image: linear-gradient(rgba(0,0,0,), url("../assets/me.jpg")); */
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("../assets/meV3.png") no-repeat center center; /* The least supported option. */;
     background-size: cover;
+    background-position: 90% 90%;
 }
 
 .arrow{
