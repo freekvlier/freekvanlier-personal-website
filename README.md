@@ -1,4 +1,4 @@
-Persoonlijke Website
+# Persoonlijke Website
 
 Deze website is bedoeld als mijn online portfolio en is nog in ontwikkeling. De bedoeling is dat deze website gaat draaien op [https://freekvanlier.nl](https://freekvanlier.nl).
 
